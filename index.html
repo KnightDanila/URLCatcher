@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>URLCatcher</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- jQuery -->
+        <script src="js/libs/jquery/jquery.js"></script>
+
+        <!-- My Style and JS -->
+        <link href="theme/style.css" rel="stylesheet" type="text/css"/>
+
+        <!-- My StatusBar -->
+        <link rel="stylesheet" href="js/loadingStatusBar/loadingStatusBar.css">
+        <script src="js/loadingStatusBar/loadingStatusBar.js"></script>
+
+        <link href="theme/linkDesigner/linkDesigner.css" rel="stylesheet" type="text/css"/>
+        <link href="theme/blockSizes/blockSizes.css" rel="stylesheet" type="text/css"/>
+        <link rel="icon" href="favicon.png"/>
+
+        <!--LOG-->
+        <link href="js/log/log.css" rel="stylesheet" type="text/css"/>
+        <script src="js/log/log.js" type="text/javascript"></script>
+
+        <!--btnScroll-->
+        <link href="js/btnScroll/btnScroll.css" rel="stylesheet" type="text/css"/>
+        <script src="js/btnScroll/btnScroll.js" type="text/javascript"></script>
+        <link rel="icon" href="theme/icon.png"/>
+    </head>
+    <body>
+
+        <h1>URL CATCHER - Mozilla Firefox Session Restorer</h1>
+
+        <!-- INFO -->
+        <h1 class="btn-scroll one-quarter" onclick="btnScroll('info')">INFO</h1>
+        <div  id="info" class="btn-scroll-content">
+            Закройте браузер и пройдите по пути:
+            <ul>
+                <li>Window XP и более ранние ОС Microsoft: C:\Documents and Settings\< имя пользователя >\Application Data\Mozilla\Firefox\Profiles\< папка профиля >;</li>
+                <li>Windows Vista и более поздние ОС: C:\Users\< имя пользователя >\AppData\Roaming\Mozilla\Firefox\Profiles\< папка профиля>;</li>
+                <li>Linux:~/.mozilla/firefox/< папка профиля>;</li>
+                <li>Mac OS X: ~/Library/Mozilla/Firefox/Profiles/< папка профиля>;</li>
+                <li>Mac OS X: ~/Library/Application Support/Firefox/Profiles/< папка профиля>;</li>
+            </ul>
+
+            <p>В то время как sessionstore.js все еще хранится в основной папке профиля Firefox, все остальные файлы теперь хранятся в папке sessionstore-backups. Также обратите внимание, что sessionstore.js отображается только когда Firefox закрыт.</p>
+            <p>Откройте папку <strong>sessionstore</strong><strong>—</strong><strong>backups</strong><strong>, </strong>там хранятся файлы нужные для восстановления:</p>
+            <ul>
+                <li><strong>sessionstore-backups/recovery.js</strong> – содержит состояние Firefox ≤ 15 секунд до последнего отключения или аварии (файл отсутствует в случае чистого отключения);</li>
+                <li><strong>sessionstore-backups/recovery.bak</strong> – содержит состояние Firefox ≤ 30 секунд до последнего отключения или аварии (файл отсутствует в случае чистого отключения);</li>
+                <li><strong>sessionstore-backups/previous.js</strong>&nbsp;– содержит состояние Firefox во время предыдущего успешного завершения работы);</li>
+                <li><strong>sessionstore-backups/upgrade.js</strong>-[build id] – содержит состояние Firefox после последнего обновления.</li>
+            </ul>
+
+            <br>Больше тут 
+            <ul>
+                <li>
+                    <a href="http://www.our-firefox.ru/kak-v-mozilla-firefox/vosstanovit-sessiyu-firefox.html">
+                        http://www.our-firefox.ru/kak-v-mozilla-firefox/vosstanovit-sessiyu-firefox.html
+                    </a>
+                </li>
+                <li>
+                    <a href="http://winitpro.ru/index.php/2014/04/30/vosstanovlenie-predydushhej-sessii-vkladok-v-mozilla-firefox/">
+                        http://www.our-firefox.ru/kak-v-mozilla-firefox/vosstanovit-sessiyu-firefox.html
+                    </a>
+                </li>  
+            </ul>
+
+
+
+            <br>Tips:
+            <br>ctrl + click (mouse left buton ) - that open a tabs in background 
+
+        </div>
+
+
+        <table id="file-info" class="full-width">
+
+        </table>
+
+
+        <input type="file" id="file-dialog" multiple>
+        <div id="your-files">Drag and Drop ZONE</div>
+        <div id="file-loading-progress" class="loading-progress-border">
+            <div class="loading-progress">
+                <div class="loading-progress-sparkle"></div>
+            </div>
+        </div>
+
+        <div class="btn-scroll one-quarter" onclick="btnScroll('sessionUrls')">Show - Only URLs</div>
+        <div id="sessionUrls" class="btn-scroll-content">
+            Nothing here yet :)
+        </div>
+        <br>
+        <div class="btn-scroll one-quarter" onclick="btnScroll('sessionUrlsAllText')">Show - All Text and URLs</div>
+        <div id="sessionUrlsAllText" class="btn-scroll-content">
+            Nothing here yet :)
+        </div>
+        <br>
+
+        <script>
+            log.ON_elemID = false;
+        </script>
+        <script src="js/urlify.js" type="text/javascript"></script>
+        <script src="js/fileReader.js"></script>
+        <script src="js/droper.js"></script>
+
+
+
+
+
+        <br><br><br><br>
+        <a href = "https://knightdanila.github.io" style='position: fixed; bottom: 10px;'>Go To KnightDanila</a>
+    </body>
+</html>

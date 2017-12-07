@@ -1,0 +1,67 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 06.12.2017, 16:37:14
+    Author     : KnightDanila
+    
+    INFO:
+https://coderwall.com/p/tfwjtw/css-transition-with-auto-width-or-height
+*/
+
+/* BUTTON STYLE */
+.btn-scroll{
+    background: green;
+    border: 1px solid greenyellow;
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+    color: greenyellow;
+    cursor: pointer;
+    display: inline-block;
+    font-family: inherit;
+    /*font-size: 14px;*/
+    font-weight: bold;
+    line-height: 1;
+    margin: 0;
+    padding: 10px 20px 11px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    -webkit-transition: all 0.15s ease-in-out;
+    -moz-transition: all 0.15s ease-in-out;
+    -ms-transition: all .15s ease-in-out;
+    -o-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+}
+
+.btn-scroll:hover {
+    color: green;
+    background: greenyellow;
+}
+
+/* CONTENT STYLE */
+.btn-scroll-content{
+    display: none;
+    /*line-height:0;*/
+    /*height: 0;*/
+    height: 0;
+    overflow: hidden;
+
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+
+    /*FOR IE*/
+    zoom: 1;
+}
+.btn-scroll-content.hover{
+    display: block;
+    /*line-height:100%;*/
+    /*height: auto;*/
+    height: 100%;
+}
